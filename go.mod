@@ -1,4 +1,4 @@
-module mlaurel.dev/movies
+module frontendmasters.com/movies
 
 go 1.24.1
 
