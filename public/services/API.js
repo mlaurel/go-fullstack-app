@@ -3,9 +3,9 @@ export const API = {
     getTopMovies: async () => {
         return await API.fetch("movies/top/")
     },
-    // getGenres: async () => {
-    //     return await API.fetch("genres/")
-    // },
+    getGenres: async () => {
+        return await API.fetch("genres/")
+    },
     getRandomMovies: async () => {
         return await API.fetch("movies/random/")
     },
@@ -26,3 +26,5 @@ export const API = {
         }
     }
 }
+
+export default API;
