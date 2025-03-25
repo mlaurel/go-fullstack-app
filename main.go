@@ -4,12 +4,17 @@ import (
 	"log"
 	"net/http"
 
+	"mlaurel.dev/movies/handlers"
 	"mlaurel.dev/movies/logger"
 )
 
 func main() {
 	// Initialize logger
 	logInstance := initializeLogger()
+
+	MovieHandler := handlers.MovieHandler {}
+
+	http.Handle("/api/movies/top", MovieHandler.GetTopMovies)
 
 	// Serve static files
 	http.Handle("/", http.FileServer(http.Dir("./public")))
