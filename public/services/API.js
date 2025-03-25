@@ -3,11 +3,11 @@ export const API = {
     getTopMovies: async () => {
         return await API.fetch("movies/top/")
     },
-    getGenres: async () => {
-        return await API.fetch("genres/")
-    },
     getRandomMovies: async () => {
         return await API.fetch("movies/random/")
+    },
+    getGenres: async () => {
+        return await API.fetch("genres/")
     },
     getMovieById: async (id) => {
         return await API.fetch(`movies/${id}`)
