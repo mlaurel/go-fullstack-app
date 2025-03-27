@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"strconv"
 
-	"go.mlaurel.dev/movies/data"
-	"go.mlaurel.dev/movies/logger"
-	"go.mlaurel.dev/movies/models"
+	"movies.mlaurel.dev/movies/data"
+	"movies.mlaurel.dev/movies/logger"
+	"movies.mlaurel.dev/movies/models"
 )
 
 type MovieHandler struct {

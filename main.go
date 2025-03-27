@@ -9,9 +9,9 @@ import (
 
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
-	"go.mlaurel.dev/movies/data"
-	"go.mlaurel.dev/movies/handlers"
-	"go.mlaurel.dev/movies/logger"
+	"movies.mlaurel.dev/movies/data"
+	"movies.mlaurel.dev/movies/handlers"
+	"movies.mlaurel.dev/movies/logger"
 )
 
 func initializeLogger() *logger.Logger {

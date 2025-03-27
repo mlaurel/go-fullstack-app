@@ -6,8 +6,8 @@ import (
 	"strconv"
 
 	_ "github.com/lib/pq"
-	"go.mlaurel.dev/movies/logger"
-	"go.mlaurel.dev/movies/models"
+	"movies.mlaurel.dev/movies/logger"
+	"movies.mlaurel.dev/movies/models"
 )
 
 type MovieRepository struct {

@@ -1,4 +1,4 @@
-module go.mlaurel.dev/movies
+module movies.mlaurel.dev/movies
 
 go 1.24.1
 
