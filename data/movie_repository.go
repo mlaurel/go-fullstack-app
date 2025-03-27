@@ -5,9 +5,9 @@ import (
 	"errors"
 	"strconv"
 
-	"frontendmasters.com/movies/logger"
-	"frontendmasters.com/movies/models"
 	_ "github.com/lib/pq"
+	"go.mlaurel.dev/movies/logger"
+	"go.mlaurel.dev/movies/models"
 )
 
 type MovieRepository struct {
@@ -28,7 +28,7 @@ const defaultLimit = 20
 func (r *MovieRepository) GetTopMovies() ([]models.Movie, error) {
 	// Fetch movies
 	query := `
-		SELECT id, tmdb_id, title, tagline, release_year, overview, score, 
+		SELECT id, tmdb_id, title, tagline, release_year, overview, score,
 		       popularity, language, poster_url, trailer_url
 		FROM movies
 		ORDER BY popularity DESC
@@ -40,7 +40,7 @@ func (r *MovieRepository) GetTopMovies() ([]models.Movie, error) {
 func (r *MovieRepository) GetRandomMovies() ([]models.Movie, error) {
 	// Fetch movies
 	query := `
-		SELECT id, tmdb_id, title, tagline, release_year, overview, score, 
+		SELECT id, tmdb_id, title, tagline, release_year, overview, score,
 		       popularity, language, poster_url, trailer_url
 		FROM movies
 		ORDER BY random() DESC
@@ -77,7 +77,7 @@ func (r *MovieRepository) getMovies(query string) ([]models.Movie, error) {
 func (r *MovieRepository) GetMovieByID(id int) (models.Movie, error) {
 	// Fetch movie
 	query := `
-		SELECT id, tmdb_id, title, tagline, release_year, overview, score, 
+		SELECT id, tmdb_id, title, tagline, release_year, overview, score,
 		       popularity, language, poster_url, trailer_url
 		FROM movies
 		WHERE id = $1
@@ -120,14 +120,14 @@ func (r *MovieRepository) SearchMoviesByName(name string, order string, genre *i
 
 	genreFilter := ""
 	if genre != nil {
-		genreFilter = ` AND ((SELECT COUNT(*) FROM movie_genres 
-								WHERE movie_id=movies.id 
+		genreFilter = ` AND ((SELECT COUNT(*) FROM movie_genres
+								WHERE movie_id=movies.id
 								AND genre_id=` + strconv.Itoa(*genre) + `) = 1) `
 	}
 
 	// Fetch movies by name
 	query := `
-		SELECT id, tmdb_id, title, tagline, release_year, overview, score, 
+		SELECT id, tmdb_id, title, tagline, release_year, overview, score,
 		       popularity, language, poster_url, trailer_url
 		FROM movies
 		WHERE (title ILIKE $1 OR overview ILIKE $1) ` + genreFilter + `
@@ -183,7 +183,7 @@ func (r *MovieRepository) GetAllGenres() ([]models.Genre, error) {
 func (r *MovieRepository) fetchMovieRelations(m *models.Movie) error {
 	// Fetch genres
 	genreQuery := `
-		SELECT g.id, g.name 
+		SELECT g.id, g.name
 		FROM genres g
 		JOIN movie_genres mg ON g.id = mg.genre_id
 		WHERE mg.movie_id = $1

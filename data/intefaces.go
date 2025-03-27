@@ -1,6 +1,6 @@
 package data
 
-import "frontendmasters.com/movies/models"
+import "go.mlaurel.dev/movies/models"
 
 type MovieStorage interface {
 	GetTopMovies() ([]models.Movie, error)

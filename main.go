@@ -7,11 +7,11 @@ import (
 	"net/http"
 	"os"
 
-	"frontendmasters.com/movies/data"
-	"frontendmasters.com/movies/handlers"
-	"frontendmasters.com/movies/logger"
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
+	"go.mlaurel.dev/movies/data"
+	"go.mlaurel.dev/movies/handlers"
+	"go.mlaurel.dev/movies/logger"
 )
 
 func initializeLogger() *logger.Logger {
@@ -61,7 +61,7 @@ func main() {
 	http.Handle("/", http.FileServer(http.Dir("public")))
 	fmt.Println("Serving the files")
 
-	const addr = ":8080"
+	const addr = ":8081"
 	err = http.ListenAndServe(addr, nil)
 	if err != nil {
 		log.Fatalf("Server failed: %v", err)
