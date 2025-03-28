@@ -129,7 +129,7 @@ func main() {
 	http.Handle("/", http.FileServer(http.Dir("public")))
 	fmt.Println("Serving the files")
 
-	const addr = ":8080"
+	const addr = ":8081"
 	err = http.ListenAndServe(addr, nil)
 	if err != nil {
 		log.Fatalf("Server failed: %v", err)
