@@ -6,8 +6,8 @@ import (
 	"strconv"
 
 	_ "github.com/lib/pq"
-	"movies.mlaurel.dev/movies/logger"
-	"movies.mlaurel.dev/movies/models"
+	"movility.com/movies/logger"
+	"movility.com/movies/models"
 )
 
 type MovieRepository struct {

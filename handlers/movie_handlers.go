@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"strconv"
 
-	"movies.mlaurel.dev/movies/data"
-	"movies.mlaurel.dev/movies/logger"
-	"movies.mlaurel.dev/movies/models"
+	"movility.com/movies/data"
+	"movility.com/movies/logger"
+	"movility.com/movies/models"
 )
 
 type MovieHandler struct {

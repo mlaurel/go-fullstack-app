@@ -1,14 +1,14 @@
-import API from "../services/API.js";
+import { API } from "../services/API.js";
 import { MovieItemComponent } from "./MovieItem.js";
 
-export class HomePage extends HTMLElement {
+export class HomePage extends HTMLElement {  // <home-page>
 
     async render() {
-        const topMovies = await API.getTopMovies();
-        renderMoviesInList(topMovies, this.querySelector("#top-10 ul"));
+        const topMovies = await API.getTopMovies()
+        renderMoviesInList(topMovies, document.querySelector("#top-10 ul"));
 
-        const randomMovies = await API.getRandomMovies();
-        renderMoviesInList(randomMovies, this.querySelector("#random ul"));
+        const randomMovies = await API.getRandomMovies()
+        renderMoviesInList(randomMovies, document.querySelector("#random ul"));
 
         function renderMoviesInList(movies, ul) {
             ul.innerHTML = "";
@@ -28,4 +28,5 @@ export class HomePage extends HTMLElement {
         this.render();
     }
 }
+
 customElements.define("home-page", HomePage);

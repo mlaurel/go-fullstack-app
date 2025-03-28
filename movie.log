@@ -1,1 +1,25 @@
 ERROR: 2025/03/25 15:05:20 logger.go:35: Hello from the Error system: <nil>
+ERROR: 2025/03/26 10:00:10 logger.go:35: Failed to scan movie row: sql: Scan error on column index 4, name "release_year": converting NULL to int is unsupported
+ERROR: 2025/03/26 10:00:10 logger.go:35: Failed to get movies: sql: Scan error on column index 4, name "release_year": converting NULL to int is unsupported
+ERROR: 2025/03/26 10:15:31 logger.go:35: Movie not found: movie not found
+ERROR: 2025/03/26 10:15:40 logger.go:35: Movie not found: movie not found
+ERROR: 2025/03/26 10:25:47 logger.go:35: Invalid ID format: strconv.Atoi: parsing "null": invalid syntax
+ERROR: 2025/03/26 10:26:30 logger.go:35: Invalid ID format: strconv.Atoi: parsing "null": invalid syntax
+ERROR: 2025/03/26 12:50:55 logger.go:35: Movie not found: movie not found
+ERROR: 2025/03/26 12:52:18 logger.go:35: Movie not found: movie not found
+ERROR: 2025/03/26 14:29:17 logger.go:35: Failed to decode registration request: EOF
+ERROR: 2025/03/26 14:31:07 logger.go:35: Failed to decode registration request: EOF
+ERROR: 2025/03/26 14:33:02 logger.go:35: Password mismatch for email: test@test.dev: <nil>
+ERROR: 2025/03/26 15:23:10 logger.go:35: Password mismatch for email: test@test.dev: <nil>
+ERROR: 2025/03/26 15:23:32 logger.go:35: Password mismatch for email: test@test.dev: <nil>
+ERROR: 2025/03/26 15:23:42 logger.go:35: Password mismatch for email: test@test.dev: <nil>
+ERROR: 2025/03/26 15:23:59 logger.go:35: User not found for email: test@test.de: <nil>
+ERROR: 2025/03/27 10:27:50 logger.go:35: Failed to decode collection request: EOF
+ERROR: 2025/03/27 10:28:02 logger.go:35: Failed to decode collection request: EOF
+ERROR: 2025/03/27 10:28:52 logger.go:35: Failed to decode collection request: EOF
+ERROR: 2025/03/27 10:29:34 logger.go:35: Failed to decode collection request: EOF
+ERROR: 2025/03/27 10:29:44 logger.go:35: Failed to decode collection request: EOF
+ERROR: 2025/03/27 14:11:00 logger.go:35: Coudln't start a login: Found no credentials for user
+ERROR: 2025/03/27 14:18:22 logger.go:35: Failed to find new user: sql: no rows in result set
+ERROR: 2025/03/27 14:18:22 logger.go:35: Failed to find user: sql: no rows in result set
+ERROR: 2025/03/27 16:02:52 logger.go:35: Couldn't get the cookie for the session: http: named cookie not present
